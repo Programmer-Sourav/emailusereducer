@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom"
 import { EmailContext, EmailProvider } from './context/EmailContext';
+import { DataContext, DataProvider } from './radiobuttonexample/contexts/DataContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -15,7 +16,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <EmailProvider>
+      <DataProvider>
     <App />
+    </DataProvider>
     </EmailProvider>
     </BrowserRouter>
   </React.StrictMode>
