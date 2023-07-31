@@ -16,6 +16,6 @@ export function EmailProvider({children}){
     
 
     return(
-        <EmailContext.Provider value={{inboxState: state.inbox, trash: state.trash, spam: state.spam, dispatch}}>{children}</EmailContext.Provider>
+        <EmailContext.Provider value={{inboxState: state.inbox, trash: state.trash, spam: state.spam, allMails: state.allMails, state, dispatch}}>{children}</EmailContext.Provider>
     )
 }

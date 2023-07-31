@@ -1,7 +1,10 @@
 export const intitialState = {
     inbox: [],
     spam: [],
-    trash: []
+    trash: [], 
+    allMails: [],
+    isStarChecked: false, 
+    isUnreadChecked: false     
 }
 
 export const ACTION_TYPES = {
@@ -29,11 +32,11 @@ export default function EmailReducer(state, action) {
     console.log(state, state.inbox, action.payload)
     return {...state, inbox: state.inbox.map((stateItem)=>stateItem.mId.toString()===action.payload.toString()? {...stateItem, unread: !stateItem.unread} : stateItem)}
     case ACTION_TYPES.INITIZLIZE: 
-    return {...state, inbox: action.payload}
+    return {...state, inbox: action.payload, allMails: action.payload}
     case ACTION_TYPES.SHOW_UNREAD:
-    return{...state, inbox: state.inbox.filter((stateItem)=>stateItem.unread)}
+    return{...state, isUnreadChecked: action.payload}
     case ACTION_TYPES.SHOW_STARRED: 
-    return {...state, inbox: state.inbox.filter((stateItem)=>stateItem.isStarred)}    
+    return {...state, isStarChecked: action.payload }    
     default:
     return state
    }
