@@ -31,10 +31,10 @@ export default function EmailCard({data}){
          <p>{data.content}</p>
          <div>
             <button onClick={()=>{deleteEmail(data)}}>Delete</button>
-            <button onClick={()=>{markAsUnread(data.mId)}}>Mark as Unread</button>
+            <button onClick={()=>{markAsUnread(data.mId)}}>{data.unread ? "Mark As Read" : "Mark As Unread"}</button>
             <button onClick={()=>{reportSpam(data)}}>Report Spam</button>
             <button> <Link to={`/details/${data.mId}`}>View Details</Link></button>
-            <button onClick={()=>{starEmail(data.mId)}}>Star </button>
+            <button onClick={()=>{starEmail(data.mId)}}>{!data.isStarred ? "Star" : "Unstar"}</button>
          </div>
         </div>
     )
