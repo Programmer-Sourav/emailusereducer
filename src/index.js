@@ -6,10 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom"
 import { EmailContext, EmailProvider } from './context/EmailContext';
 import { DataContext, DataProvider } from './radiobuttonexample/contexts/DataContext';
+import { CheckBoxContext, CheckboxProvider } from './checkboxexample/contexts/CheckBoxContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-export { EmailContext }
+export { CheckBoxContext, EmailContext }
 
 
 root.render(
@@ -17,7 +18,9 @@ root.render(
     <BrowserRouter>
     <EmailProvider>
       <DataProvider>
+        <CheckboxProvider>
     <App />
+    </CheckboxProvider>
     </DataProvider>
     </EmailProvider>
     </BrowserRouter>
