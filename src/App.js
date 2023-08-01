@@ -12,7 +12,7 @@ function App() {
       <Link to="/">Inbox</Link>
       <Link to="/spam"> Spam</Link>
       <Link to="/trash"> Trash</Link>
-      <Link to="/radio"> Radio Example</Link>
+      <Link to="/main"> Radio Example</Link>
       <Routes> 
         <Route path='/' element={<Home/>}>Home</Route>
         <Route path='/spam' element={<Spam/>}> Spam</Route>
