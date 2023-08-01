@@ -7,10 +7,11 @@ import { BrowserRouter } from "react-router-dom"
 import { EmailContext, EmailProvider } from './context/EmailContext';
 import { DataContext, DataProvider } from './radiobuttonexample/contexts/DataContext';
 import { CheckBoxContext, CheckboxProvider } from './checkboxexample/contexts/CheckBoxContext';
+import { SelectContext, SelectProvider } from './selectInputexample/contexts/SelectContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-export { CheckBoxContext, EmailContext }
+export { CheckBoxContext, EmailContext, SelectContext }
 
 
 root.render(
@@ -19,7 +20,9 @@ root.render(
     <EmailProvider>
       <DataProvider>
         <CheckboxProvider>
+          <SelectProvider>
     <App />
+    </SelectProvider>
     </CheckboxProvider>
     </DataProvider>
     </EmailProvider>

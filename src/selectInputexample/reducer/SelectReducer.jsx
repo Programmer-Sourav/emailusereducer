@@ -11,7 +11,7 @@ export const ACTION_TYPES_FOR_SELECT = {
 export default function SelectReducer(state, action){
     switch(action.type){
         case ACTION_TYPES_FOR_SELECT.SELECTED_OPTION: 
-        return {...state, selectedOption:{} }
+        return {...state, selectedOption: action.payload }
         default: 
         return state
     }

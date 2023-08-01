@@ -17,6 +17,6 @@ export function SelectProvider({children}){
    state.initialData = data
 
     return(
-      <SelectContext.Provider value={{dataState: state.initialData}}>{children}</SelectContext.Provider>
+      <SelectContext.Provider value={{dataState: state.initialData, state, dispatch}}>{children}</SelectContext.Provider>
     )
 }
