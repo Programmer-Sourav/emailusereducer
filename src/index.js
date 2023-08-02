@@ -8,10 +8,11 @@ import { EmailContext, EmailProvider } from './context/EmailContext';
 import { DataContext, DataProvider } from './radiobuttonexample/contexts/DataContext';
 import { CheckBoxContext, CheckboxProvider } from './checkboxexample/contexts/CheckBoxContext';
 import { SelectContext, SelectProvider } from './selectInputexample/contexts/SelectContext';
+import { BasicContext, BasicProvider } from './basicexample/contexts/BasicContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-export { CheckBoxContext, EmailContext, SelectContext }
+export { CheckBoxContext, EmailContext, SelectContext, BasicContext }
 
 
 root.render(
@@ -21,7 +22,9 @@ root.render(
       <DataProvider>
         <CheckboxProvider>
           <SelectProvider>
+            <BasicProvider>
     <App />
+    </BasicProvider>
     </SelectProvider>
     </CheckboxProvider>
     </DataProvider>
